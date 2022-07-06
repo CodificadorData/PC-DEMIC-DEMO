@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD42937428753A39006FA785 /* FirebaseDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD42937328753A39006FA785 /* FirebaseDatabase.swift */; };
+		CD429378287624CA006FA785 /* Reunion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD429377287624CA006FA785 /* Reunion.swift */; };
 		CDBB8DF72871337A00E46C46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBB8DF62871337A00E46C46 /* AppDelegate.swift */; };
 		CDBB8DF92871337A00E46C46 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBB8DF82871337A00E46C46 /* SceneDelegate.swift */; };
 		CDBB8DFB2871337A00E46C46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBB8DFA2871337A00E46C46 /* ViewController.swift */; };
@@ -45,6 +47,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD42937328753A39006FA785 /* FirebaseDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatabase.swift; sourceTree = "<group>"; };
+		CD429377287624CA006FA785 /* Reunion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reunion.swift; sourceTree = "<group>"; };
 		CDBB8DF32871337A00E46C46 /* pcmedic-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pcmedic-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDBB8DF62871337A00E46C46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDBB8DF82871337A00E46C46 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 				CDBB8E042871337B00E46C46 /* Info.plist */,
 				CDBB8E4328714F5300E46C46 /* GoogleService-Info.plist */,
 				CDBB8E4528734AE200E46C46 /* MeetsViewController.swift */,
+				CD42937328753A39006FA785 /* FirebaseDatabase.swift */,
+				CD429377287624CA006FA785 /* Reunion.swift */,
 			);
 			path = "pcmedic-demo";
 			sourceTree = "<group>";
@@ -231,9 +237,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD42937428753A39006FA785 /* FirebaseDatabase.swift in Sources */,
 				CDBB8DFB2871337A00E46C46 /* ViewController.swift in Sources */,
 				CDBB8E4628734AE200E46C46 /* MeetsViewController.swift in Sources */,
 				CDBB8DF72871337A00E46C46 /* AppDelegate.swift in Sources */,
+				CD429378287624CA006FA785 /* Reunion.swift in Sources */,
 				CDBB8DF92871337A00E46C46 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

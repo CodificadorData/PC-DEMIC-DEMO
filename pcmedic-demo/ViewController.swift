@@ -9,39 +9,78 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    //objetos
+    @IBOutlet weak var diasPickerView: UIPickerView!
+    @IBOutlet weak var horaPickerView: UIPickerView!
+    @IBOutlet weak var trabajadoresSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var guardarButton: UIButton!
+    @IBOutlet weak var miListaButton: NSLayoutConstraint!
+    @IBOutlet weak var primerView: UIView!
+    @IBOutlet weak var segundoView: UIView!
+    @IBOutlet weak var tercerView: UIView!
+    
+ /*
+    //variables
     let database = Firestore.firestore()
 
-    var semana = [
+    private let semana = [
         "Lunes",
         "Martes",
         "Miércoles",
         "Jueves",
         "Viernes",
-        "Sábado",
+        "Sábado"
     ]
     
-    var trabajadores = [
+    private let trabajadores = [
         "Juan M.",
         "Carlos M.",
-        "Pedro M.",
+        "Pedro M."
     ]
     
-    var horarios = [
+    private let horarios = [
         "10:00",
         "12:00",
         "14:00",
         "16:00",
         "18:00",
-        "20:00",
+        "20:00"
     ]
-    
+    */
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
         
-//       registrar
+        //estilos de las views
+        primerView.layer.cornerRadius = 20
+        segundoView.layer.cornerRadius = 20
+        tercerView.layer.cornerRadius = 20
+        
+        //Llenar el PickerView Días
+        /*
+        diasPickerView.dataSource = self
+        diasPickerView.delegate = self
+        //Llenar el PickerView Horas
+        
+        horaPickerView.dataSource = self
+        horaPickerView.delegate = self
+        //Llenar el SegementedControl trabajadores
+        trabajadoresSegmentedControl.removeAllSegments()
+        for (index, value) in
+                trabajadores.enumerated()       {
+            
+            trabajadoresSegmentedControl.insertSegment(withTitle: value, at: index, animated: true)
+        }
+        
+        
+ 
+        */
+        
+        
+        
+        
+/*      registrar
         let docRef = database.document("Reuniones/reunion_hora")
         docRef.setData(["nombre":"Christian","apellido":"Morante"], merge: true)
         docRef.addSnapshotListener { snap, error in
@@ -51,8 +90,31 @@ class ViewController: UIViewController {
                         return
                     }
                 }
+        
+*/
+        
     }
 
 
 
 }
+/*
+extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate{
+    
+
+func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    return 1
+}
+
+   
+func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    
+        return semana.count
+  
+}
+
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return semana[row]
+    }
+}
+*/
