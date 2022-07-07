@@ -7,6 +7,7 @@
 import Foundation
 import UIKit
 import FirebaseFirestore
+import FirebaseFunctions
 
 class MeetsViewController: UIViewController {
 
@@ -20,6 +21,7 @@ class MeetsViewController: UIViewController {
         super.viewDidLoad()
         
         reunionesTableView.dataSource = self
+        reunionesTableView.delegate = self
         FirebaseDatabase.shared.getList(document: "Reuniones") { (reuniones: [Reunion]) in
             self.reuniones = reuniones
             self.reunionesTableView.reloadData()
@@ -58,19 +60,28 @@ class MeetsViewController: UIViewController {
 }
 
 
-extension MeetsViewController: UITableViewDataSource{
+extension MeetsViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return reuniones.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ReunionTableCell
+        else {
+            return UITableViewCell()
+        }
+        
         let reunion = reuniones[indexPath.row]
-        cell.textLabel?.text = reunion.trabajador
+        cell.trabajadorLabel.text = reunion.trabajador
+        cell.diaLabel.text = reunion.dia
+        cell.horaLabel.text = reunion.hora
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
     
     
 }
