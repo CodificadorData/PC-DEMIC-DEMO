@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="re0-oC-v0G">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -52,9 +52,6 @@
                                             <segment title="First"/>
                                             <segment title="Second"/>
                                         </segments>
-                                        <connections>
-                                            <action selector="trabajadoresAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="XCd-Hk-wH3"/>
-                                        </connections>
                                     </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRu-JI-MWh">
                                         <rect key="frame" x="154.5" y="84.5" width="90.5" height="31"/>
@@ -86,13 +83,12 @@
                                     <constraint firstItem="JBO-pz-iH1" firstAttribute="centerX" secondItem="DyX-1N-Xgl" secondAttribute="centerX" id="O9o-5A-msX"/>
                                     <constraint firstItem="bRu-JI-MWh" firstAttribute="centerX" secondItem="DyX-1N-Xgl" secondAttribute="centerX" id="aXN-9r-1sF"/>
                                     <constraint firstItem="JBO-pz-iH1" firstAttribute="top" secondItem="DyX-1N-Xgl" secondAttribute="top" constant="20" id="dlj-NG-UC1"/>
-                                    <constraint firstItem="7HK-Za-gOe" firstAttribute="centerX" secondItem="DyX-1N-Xgl" secondAttribute="centerX" id="iHI-HK-ELb"/>
                                     <constraint firstAttribute="bottom" secondItem="7HK-Za-gOe" secondAttribute="bottom" constant="15" id="jsx-E5-jEH"/>
                                     <constraint firstItem="bRu-JI-MWh" firstAttribute="centerY" secondItem="DyX-1N-Xgl" secondAttribute="centerY" id="psv-aA-Ict"/>
                                     <constraint firstAttribute="trailing" secondItem="JBO-pz-iH1" secondAttribute="trailing" constant="20" id="sNg-QZ-0xq"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REUNIONES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Tl-p5-bQF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REGISTRAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Tl-p5-bQF">
                                 <rect key="frame" x="117" y="64" width="185" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="185" id="efG-e8-imq"/>
@@ -115,7 +111,6 @@
                             <constraint firstItem="DyX-1N-Xgl" firstAttribute="top" secondItem="FGu-AH-sSn" secondAttribute="bottom" constant="10" id="bB7-xg-Wpa"/>
                             <constraint firstItem="8Tl-p5-bQF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="elm-j3-JN2"/>
                             <constraint firstItem="8Tl-p5-bQF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h0U-qd-Asw"/>
-                            <constraint firstItem="8Tl-p5-bQF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hNn-4m-DKi"/>
                             <constraint firstItem="FGu-AH-sSn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hc2-AE-OLR"/>
                             <constraint firstItem="J8n-5H-CWS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ivl-4o-brB"/>
                             <constraint firstItem="8Tl-p5-bQF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="117" id="kl4-q2-gY8"/>
@@ -127,7 +122,6 @@
                         <outlet property="diasPickerView" destination="vag-Ma-HVC" id="4i6-EI-d7X"/>
                         <outlet property="guardarButton" destination="7HK-Za-gOe" id="Mby-Tx-Fsv"/>
                         <outlet property="horaPickerView" destination="cke-c5-HfA" id="cBe-RV-AFB"/>
-                        <outlet property="miListaButton" destination="iHI-HK-ELb" id="cIy-Tb-4x8"/>
                         <outlet property="primerView" destination="J8n-5H-CWS" id="THi-Kh-M8J"/>
                         <outlet property="segundoView" destination="FGu-AH-sSn" id="g8I-0p-AHT"/>
                         <outlet property="tercerView" destination="DyX-1N-Xgl" id="z68-VO-WGa"/>
@@ -136,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1352.1739130434785" y="89.732142857142847"/>
+            <point key="canvasLocation" x="1557" y="48"/>
         </scene>
         <!--Meets View Controller-->
         <scene sceneID="Yp4-yY-clV">
@@ -147,13 +141,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MIS REUNIONES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zE9-Az-Enn">
-                                <rect key="frame" x="102" y="-30" width="239" height="39"/>
+                                <rect key="frame" x="102" y="10" width="239" height="39"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="32"/>
                                 <color key="textColor" red="1" green="0.57940605469999995" blue="0.53908270609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ABd-Sl-vBf">
-                                <rect key="frame" x="0.0" y="9" width="414" height="824"/>
+                                <rect key="frame" x="0.0" y="49" width="414" height="750"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="86" id="Pp6-Il-kFW" customClass="ReunionTableCell" customModule="pcmedic_demo" customModuleProvider="target">
@@ -203,6 +197,7 @@
                         <viewLayoutGuide key="safeArea" id="Fqy-AL-F4V"/>
                         <color key="backgroundColor" systemColor="systemBrownColor"/>
                         <constraints>
+                            <constraint firstItem="zE9-Az-Enn" firstAttribute="top" secondItem="X8g-Mg-Oow" secondAttribute="top" constant="10" id="86h-JP-J80"/>
                             <constraint firstItem="ABd-Sl-vBf" firstAttribute="centerX" secondItem="X8g-Mg-Oow" secondAttribute="centerX" id="SRu-zq-tqD"/>
                             <constraint firstItem="ABd-Sl-vBf" firstAttribute="centerX" secondItem="X8g-Mg-Oow" secondAttribute="centerX" id="dB5-xR-48M"/>
                             <constraint firstItem="ABd-Sl-vBf" firstAttribute="centerY" secondItem="X8g-Mg-Oow" secondAttribute="centerY" id="euH-bD-20H"/>

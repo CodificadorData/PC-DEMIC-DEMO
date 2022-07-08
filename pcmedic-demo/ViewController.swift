@@ -18,27 +18,27 @@ class ViewController: UIViewController {
     @IBOutlet weak var primerView: UIView!
     @IBOutlet weak var segundoView: UIView!
     @IBOutlet weak var tercerView: UIView!
-    
     @IBOutlet weak var fechaPickerView: UIDatePicker!
     
+    
+    var dia:String=""
+    var hora:String!=""
+    var trabajador:String=""
+    
+    
     //actions
-    
-    
-    
-    @IBAction func guardarAction(_ sender: Any) {
+   @IBAction func guardarAction(_ sender: Any) {
         
         let i = trabajadoresSegmentedControl.selectedSegmentIndex
-        print (trabajadoresSegmentedControl.titleForSegment(at: i))
-        diasPickerView.selectRow(1, inComponent: 1, animated: true)
-        
-        fechaPickerView.timeZone
-    }
-    
+       print (trabajadoresSegmentedControl.titleForSegment(at: i) as Any)
+       print ("Dia - \(dia) --- Hora - \(hora)")
+   }
     
     //variables
     let database = Firestore.firestore()
     var pickerhora:String!
     var pickerdia:String!
+    
     private let semana = [
         "Lunes",
         "Martes",
@@ -81,6 +81,8 @@ class ViewController: UIViewController {
         
         horaPickerView.dataSource = self
         horaPickerView.delegate = self
+        
+        
         //Llenar el SegementedControl trabajadores
         trabajadoresSegmentedControl.removeAllSegments()
         for (index, value) in
@@ -90,7 +92,8 @@ class ViewController: UIViewController {
         }
         
         
- 
+        //extraer dato del pickerview
+        
         
         
         
@@ -117,7 +120,6 @@ class ViewController: UIViewController {
 
 extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate{
     
-
 func numberOfComponents(in pickerView: UIPickerView) -> Int {
     return 1
 }
@@ -132,7 +134,7 @@ func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: I
         return horarios.count
     }
   
-}
+        }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
@@ -147,13 +149,21 @@ func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: I
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        if pickerView == diasPickerView {
-            
-        }
-        else {
-            
-        }
         
+        switch pickerView {
+        
+    case diasPickerView :
+        print("diass eleccionado \(semana[row])")
+        self.dia=semana[row]
+        
+    case horaPickerView :
+        print("diass eleccionado \(horarios[row])")
+        self.hora=horarios[row]
+       
+        default:
+            print("No seleccionastenadaa")
+        }
     }
 }
+
 

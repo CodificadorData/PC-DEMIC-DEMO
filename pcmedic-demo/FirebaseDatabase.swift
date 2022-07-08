@@ -26,17 +26,18 @@ public class FirebaseDatabase {
                 return
             }
             
-            
+            //CONVIRTIENDO A OBJETO SWIFT
             guard let object = T(dictionary: data)  else {
                 return
             }
             
-            print("asdasdads \(data)")
+            //
+            print("DATOS: \(data)")
             block(object)
         }
     }
     
-    
+    //CONSEGUIR LA COLECCION
     func getList<T: Codable>(document: String,  block: @escaping ([T]) -> Void ) {
         let docRef = database.collection(document)
         docRef.addSnapshotListener { snap, error in
@@ -52,6 +53,7 @@ public class FirebaseDatabase {
         }
     }
     
+    //
     func arrayObject<T:Codable>(dataList: [QueryDocumentSnapshot], type: T.Type) -> [T]{
         var arrayObject: [T] = []
         for data in dataList {
@@ -63,7 +65,7 @@ public class FirebaseDatabase {
         return arrayObject
     }
 }
-
+//CONVIERTE DE OBJETO SWIFT A JSON
 extension Encodable {
     var toDictionnary: [String : Any]? {
         guard let data =  try? JSONEncoder().encode(self) else {
@@ -72,7 +74,7 @@ extension Encodable {
         return try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any]
     }
 }
-
+//CONVIERTE DE JSON A OBJETO SWIFT
 extension Decodable {
     /// Initialize from JSON Dictionary. Return nil on failure
     init?(dictionary value: [String:Any]){
